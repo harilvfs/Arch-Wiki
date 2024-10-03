@@ -7,7 +7,7 @@ When installing a full desktop environment, most of them handle the audio server
 Before you begin, make sure your system is up to date:
 
 ```bash
-sudo pacman -Syu
+sudo pacman -Syyu
 ```
 
 ### Required Packages
