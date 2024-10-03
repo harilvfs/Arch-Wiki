@@ -64,6 +64,19 @@ check_sudo() {
         echo -e "${ERROR} This script must be run as root. Use sudo."
         exit 1
     fi
+
+# Check if root is in the wheel group
+    if ! groups root | grep -q "\bwheel\b"; then
+        echo "${INFO} Root is not in the wheel group. Adding root to the wheel group.${ENDCOLOR}"
+        usermod -aG wheel root
+
+        if [[ $? -eq 0 ]]; then
+            echo "${INFO} Root has been successfully added to the wheel group.${ENDCOLOR}"
+        else
+            echo -e "${ERROR} Failed to add root to the wheel group."
+            exit 1
+        fi
+    fi
 }
 
 # Function to check if NVIDIA card is present
