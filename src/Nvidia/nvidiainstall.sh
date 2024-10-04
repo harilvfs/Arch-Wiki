@@ -262,9 +262,6 @@ update_grub_config() {
 # Reboot confirmation prompt
 confirm_reboot() {
     echo -e "${GREEN}Installation complete.${ENDCOLOR}"
-    if [[ $DEBUG_MODE != true ]]; then
-        echo -e "Saved log at $LOG_FILE"
-    fi
     read -rp "Would you like to reboot now? (y/N): " reboot_now
     case "$reboot_now" in
         [yY][eE][sS]|[yY])
