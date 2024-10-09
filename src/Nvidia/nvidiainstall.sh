@@ -116,7 +116,7 @@ EOF
 # Confirmation prompt
 confirm_proceed() {
     show_logo
-    echo -e "${RED}Warning:${ENDCOLOR} This script is experimental. Use at your own risk!"
+    echo -e "${RED}Warning:${ENDCOLOR} This script is experimental and only supports Maxwell or newer. Use at your own risk!"
     echo -e "${INFO} ${ENDCOLOR}This script will install ${GREEN}NVIDIA${ENDCOLOR} drivers and modify system configurations.${ENDCOLOR}"
     read -rp "Do you want to proceed? (y/N): " confirm
     case "$confirm" in
