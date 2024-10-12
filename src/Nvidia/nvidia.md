@@ -1,14 +1,5 @@
 # Installing NVIDIA Drivers on Arch Linux
 
-## Alternative: Nvidiainstall (Experimental)
-
-Nvidiainstall offers a fully automated method for installing NVIDIA drivers on Arch Linux.
-
-To install all NVIDIA drivers automatically, open a terminal and run the following command:
-```bash
-sudo curl -sSL https://raw.githubusercontent.com/Justus0405/Arch-Wiki/refs/heads/main/src/Nvidia/nvidiainstall.sh | bash
-```
-
 ## Step 1: Install NVIDIA Packages
 
 Open a terminal and run the following command to install the necessary NVIDIA packages:
