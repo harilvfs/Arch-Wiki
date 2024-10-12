@@ -12,6 +12,11 @@
     sudo pacman -S <package-name>
     ```
 
+- **Install a package** from a .pacman file.
+    ```bash
+    sudo pacman -U <file-name.pacman>
+    ```
+
 - **Check if a package is installed**.
     ```bash
     pacman -Qs <package-name>
