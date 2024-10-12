@@ -26,7 +26,7 @@ Instructions for setting up a desktop environment.
 ### [Nvidia Driver Guide](https://github.com/Justus0405/Arch-Wiki/blob/main/src/Nvidia/nvidia.md)
 Instructions for installing Nvidia drivers using only the latest methods.
 
-### [Nvidiainstall (Experimental)](https://github.com/Justus0405/Arch-Wiki/blob/main/src/Nvidia/nvidiainstall.sh)
+### [Nvidiainstall](https://github.com/Justus0405/Nvidiainstall)
 A fully automated method for installing Nvidia drivers on Arch Linux.
 
 ### [Nvidia Deprecated List](https://github.com/Justus0405/Arch-Wiki/blob/main/src/Nvidia/nvidia-depricated.md)
