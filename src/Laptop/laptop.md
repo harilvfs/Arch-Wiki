@@ -32,37 +32,7 @@ To keep your laptop running with the lid closed, modify systemd's configuration.
 
 > **Warning**: Using both `tlp` and `auto-cpufreq` together will cause compatibility issues. It is recommended to use one power management tool at a time to avoid conflicts in settings and performance optimization.
 
-#### 2.1. TLP (Advanced Power Management)
-
-TLP optimizes battery life automatically.
-
-1. Install TLP:
-
-    ```bash
-    sudo pacman -S tlp tlp-rdw
-    ```
-
-2. Start and enable the service:
-
-    ```bash
-    sudo systemctl enable tlp --now
-    ```
-
-3. Check TLP status:
-
-    ```bash
-    sudo tlp-stat
-    ```
-
-4. **Optional**: For a GUI, install `tlpui` (requires AUR helper like `yay`):
-
-    ```bash
-    yay -S tlpui
-    ```
-
-    Run `tlpui` to configure TLP with a graphical interface.
-
-#### 2.2. auto-cpufreq (CPU Power Scaling)
+#### 2.1. auto-cpufreq (CPU Power Scaling) (Recommended)
 
 `auto-cpufreq` adjusts CPU frequency and power settings based on system load and battery status, optimizing performance and energy use.
 
@@ -101,6 +71,36 @@ TLP optimizes battery life automatically.
     ```bash
     sudo auto-cpufreq --remove
     ```
+
+#### 2.2. TLP (Advanced Power Management)
+
+TLP optimizes battery life automatically.
+
+1. Install TLP:
+
+    ```bash
+    sudo pacman -S tlp tlp-rdw
+    ```
+
+2. Start and enable the service:
+
+    ```bash
+    sudo systemctl enable tlp --now
+    ```
+
+3. Check TLP status:
+
+    ```bash
+    sudo tlp-stat
+    ```
+
+4. **Optional**: For a GUI, install `tlpui` (requires AUR helper like `yay`):
+
+    ```bash
+    yay -S tlpui
+    ```
+
+    Run `tlpui` to configure TLP with a graphical interface.
 
 #### 2.3. CPU Scaling Governor
 
