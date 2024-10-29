@@ -40,7 +40,7 @@ sudo pacman -S gnome gnome-tweaks gdm gst-libav pipewire-jack noto-fonts-emoji
 
 - **`ttf-dejavu`**: Some games, especially by Valve, are designed with this font in mind. Installing it prevents tiny, hard-to-read fallback text by providing the correct font size.
 
-<br><br>
+<br>
 
 ### Keyboard Layout
 
@@ -50,7 +50,7 @@ If you are using a non-US keyboard layout, it’s advisable to change it with th
 sudo localectl set-keymap de-latin1
 ```
 
-<br><br>
+<br>
 
 ### Enable the Display Manager
 
@@ -60,7 +60,7 @@ Next, enable the autostart for the login manager (GDM):
 sudo systemctl enable gdm
 ```
 
-<br><br>
+<br>
 
 ### Reboot
 
