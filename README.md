@@ -31,3 +31,13 @@ A fully automated method for installing Nvidia drivers on Arch Linux.
 
 ### [Nvidia Deprecated List](https://github.com/Justus0405/Arch-Wiki/blob/main/src/Nvidia/nvidia-depricated.md)
 A list of deprecated Nvidia driver installation methods.
+
+## 3. Essentials
+
+### [NTP Guide](https://github.com/Justus0405/Arch-Wiki/blob/main/src/Essentials/ntp.md)
+Instructions for Installing and Configuring NTP on Arch Linux.
+
+## 4. Laptop
+
+### [Battery Optimization](https://github.com/Justus0405/Arch-Wiki/blob/main/src/Laptop/laptop.md)
+A comprehensive guide to optimizing battery life for laptops running Arch Linux.
