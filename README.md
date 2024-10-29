@@ -19,7 +19,7 @@ Optimize and manage your mirrorlist for faster package downloads.
 A guide for installing PipeWire manually.
 
 ### [Guide for Installing a Desktop Environment](https://github.com/Justus0405/Arch-Wiki/blob/main/src/Desktop/desktop.md)
-Instructions for setting up a desktop environment.
+Instructions for setting up a desktop environment with a guide to essential fonts.
 
 ## 2. Nvidia
 
