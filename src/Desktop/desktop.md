@@ -24,10 +24,11 @@ To install these packages, run the following command:
 ```bash
 sudo pacman -S gnome gnome-tweaks gdm gst-libav pipewire-jack noto-fonts-emoji
 ```
+<br><br>
 
 ### If you have trouble with some missing Fonts, here is a list with the essentials:
 
-- **`noto-fonts`**: Essential for wide language coverage, supporting many scripts and special characters.
+- **`noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra`**: Essential for wide language coverage, supporting many scripts and special characters.
   
 - **`ttf-source-code-pro`**, **`ttf-source-sans-pro`**, **`ttf-source-serif-pro`**: These fonts provide high-quality typefaces for Latin characters in monospace, sans-serif, and serif categories.
 
