@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Arch Wiki",
   description: "A simple Arch Linux installation guide",
-  base: "/arch-wiki/",
+  base: "/Arch-Wiki/",
   lastUpdated: true,
 
   head: [
