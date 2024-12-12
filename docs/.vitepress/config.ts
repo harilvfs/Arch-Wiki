@@ -8,7 +8,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-        ["link", { rel: "icon", href: "/Arch-Wiki/archx.png" }],
+        ["link", { rel: "icon", href: "/Arch-Wiki/archx.webp" }],
     ],
 
   themeConfig: {
