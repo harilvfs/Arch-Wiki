@@ -17,7 +17,7 @@ export default defineConfig({
     outline: "deep",
     docsDir: "docs",
     editLink: {
-      pattern: "https://github.com/Justus0405/arch-wiki/tree/main/docs/:path",
+      pattern: "https://github.com/Justus0405/Arch-Wiki/tree/main/docs/:path",
       text: "Edit this page on GitHub",
     },
     nav: [
