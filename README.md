@@ -1,6 +1,6 @@
 # Main Page
 
-<img src="https://archlinux.org/static/logos/archlinux-logo-light-scalable.1ae4cc2e2469.svg" width="100" />
+<img src="https://archlinux.org/static/logos/archlinux-logo-light-scalable.1ae4cc2e2469.svg" width="200" />
 
 Welcome to the ArchWiki - OCD Edition: your alternative source for Arch Linux documentation on the web.
 
