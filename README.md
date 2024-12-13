@@ -7,9 +7,8 @@ Welcome to **ArchWiki - OCD Edition**: your meticulously organized and alternati
 <p>
   <a href="https://archlinux.org/" target="_blank">
     <img alt="Arch" src="https://img.shields.io/badge/ARCH-1793D1?style=flat-square" width="58">
-  </a>
-  <a href="https://Justus0405.github.io/Arch-Wiki/" target="_blank">
-    <img alt="Wiki" src="https://img.shields.io/badge/WIKI-98c379?style=flat-square" width="60">
+  </a> <a href="https://Justus0405.github.io/Arch-Wiki/" target="_blank">
+    <img alt="Wiki" src="https://img.shields.io/badge/WIKI-98c379?style=flat-square" width="58">
   </a>
 </p>
 
