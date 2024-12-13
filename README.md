@@ -1,4 +1,7 @@
-# ArchWiki - OCD Edition  
+<h1 align="center">
+  
+ArchWiki - OCD Edition  
+</h1>
 
 <img src="https://archlinux.org/static/logos/archlinux-logo-light-scalable.1ae4cc2e2469.svg" width="200" alt="Arch Linux Logo" />
 
