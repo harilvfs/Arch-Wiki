@@ -3,6 +3,9 @@
 ArchWiki - OCD Edition  
 
 <img src="https://archlinux.org/static/logos/archlinux-logo-light-scalable.1ae4cc2e2469.svg" width="200" alt="Arch Linux Logo" />
+
+[![github actions build status][check]][link]
+
 </h1>
 
 Welcome to **ArchWiki - OCD Edition**: your meticulously organized and alternative source for Arch Linux documentation. Designed for enthusiasts and beginners alike, this wiki offers a seamless guide to installaing Arch Linux.  
@@ -16,3 +19,8 @@ This project aims to provide a structured and user-friendly alternative to the t
 ## Explore the Documentation  
 
 Visit the full ArchWiki - OCD Edition at: [Arch-Wiki Documentation](https://Justus0405.github.io/Arch-Wiki/)
+
+
+[check]: https://github.com/Justus0405/Arch-Wiki/actions/workflows/deploy.yml/badge.svg
+[link]: https://github.com/Justus0405/Arch-Wiki/actions/workflows/deploy.yml
+
