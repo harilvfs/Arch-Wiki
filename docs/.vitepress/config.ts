@@ -3,13 +3,13 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Arch Wiki",
-  description: "A simple Arch Linux installation guide",
+  description: "A concise guide for Arch Linux installation",
   base: "/Arch-Wiki/",
   lastUpdated: true,
 
   head: [
-        ["link", { rel: "icon", href: "/Arch-Wiki/archx.webp" }],
-    ],
+    ["link", { rel: "icon", href: "/Arch-Wiki/archx.webp" }],
+  ],
 
   themeConfig: {
     siteTitle: "Arch Wiki",
@@ -45,9 +45,45 @@ export default defineConfig({
         collapsible: true,
         collapsed: false,
         items: [
-          { text: 'Base Install', link: '/installation/baseinstall.md' },
-          { text: 'Post-Install Configuration', link: '/installation/post-installation.md' },
-          { text: 'Bootloader Setup', link: '/installation/grubinstall.md' }
+          { text: 'Base Installation', link: '/installation/baseinstall.md' },
+          { text: 'Post-Installation Configuration', link: '/installation/post-installation.md' },
+          { text: 'Bootloader Setup', link: '/installation/grubinstall.md' },
+          { text: 'Legacy Notes', link: '/notes/legacy.md' }
+        ]
+      },
+      {
+        text: 'Graphics Drivers',
+        collapsible: true,
+        collapsed: false,
+        items: [
+          { text: 'Nvidia Installation', link: '/nvidia/installnvidia.md' },
+          { text: 'Deprecated Methods', link: '/nvidia/deprecated.md' },
+        ]
+      },
+      { 
+        text: 'Sound',
+        collapsible: true,
+        collapsed: false,
+        items: [
+          { text: 'PipeWire Setup', link: '/sound/pipewire.md' },
+        ]
+      },
+      {
+        text: 'Desktop Environments',
+        collapsible: true,
+        collapsed: false,
+        items: [
+          { text: 'GNOME Installation', link: '/desktop/desktopenv.md' },
+        ]
+      },
+      {
+        text: 'Tiling Window Managers',
+        collapsible: true,
+        collapsed: false,
+        items: [
+          { text: 'Hyprland', link: '/wm/hyprland.md' },
+          { text: 'i3wm', link: '/wm/i3.md' },
+          { text: 'Dwm', link: '/wm/dwm.md' },
         ]
       },
       {
@@ -56,48 +92,23 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Pacman', link: '/pacman/pacman.md' },
-          { text: 'Mirror list', link: '/pacman/mirrorlist.md' }
-        ]
-      },
-      { 
-        text: 'Sound',
-        collapsible: true,
-        collapsed: false,
-        items: [
-        { text: 'PipeWire', link: '/sound/pipewire.md' },
+          { text: 'Mirror List', link: '/pacman/mirrorlist.md' }
         ]
       },
       {
-        text: 'Desktop',
+        text: 'Essential Configurations',
         collapsible: true,
         collapsed: false,
         items: [
-        { text: 'Gnome Installation', link: '/desktop/desktopenv.md' },
+          { text: 'NTP Setup', link: '/essential/ntp.md' },
         ]
       },
       {
-        text: 'Graphic Setup',
+        text: 'Laptop-Specific',
         collapsible: true,
         collapsed: false,
         items: [
-        { text: 'Nvidia', link: '/nvidia/installnvidia.md' },
-        { text: 'Deprecated Method', link: '/nvidia/deprecated.md' },
-        ]
-      },
-      {
-        text: 'Essential',
-        collapsible: true,
-        collapsed: false,
-        items: [
-        { text: 'Ntp Setup', link: '/essential/ntp.md' },
-        ]
-      },
-      {
-        text: 'Laptop',
-        collapsible: true,
-        collapsed: false,
-        items: [
-        { text: 'Battery Optimization', link: '/laptop/batteryopt.md' },
+          { text: 'Battery Optimization', link: '/laptop/batteryopt.md' },
         ]
       },
     ],
@@ -105,16 +116,18 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/Justus0405" },
       { icon: "discord", link: "https://discord.com/invite/E2Bp7GtcaA" },
+      { icon: "telegram", link: "https://t.me/harilvfs" },
     ],
     footer: {
-      message: "Released under the MIT License.",
-      copyright: "Copyright © 2024 Justus0405",
+      message: "Released under the MIT License. Built by <a href='https://github.com/harilvfs' target='_blank'>harilvfs</a> (aka Hari Chalise).",
+      copyright: "Copyright © 2024 justus0405",
     },
+
     search: {
       provider: "local",
     },
-    returnToTopLabel: 'Go to Top',
-    sidebarMenuLabel: 'Menu',
+    returnToTopLabel: 'Return to Top',
+    sidebarMenuLabel: 'Sidebar Menu',
   },
 });
 

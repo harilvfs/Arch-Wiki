@@ -30,7 +30,8 @@ To keep your laptop running with the lid closed, modify systemd's configuration.
 
 ### 2. Battery Optimization
 
-> [!Warning] Using both `tlp` and `auto-cpufreq` together will cause compatibility issues. It is recommended to use one power management tool at a time to avoid conflicts in settings and performance optimization.
+> [!Warning]
+> Using both `tlp` and `auto-cpufreq` together will cause compatibility issues. It is recommended to use one power management tool at a time to avoid conflicts in settings and performance optimization.
 
 #### 2.1. auto-cpufreq (CPU Power Scaling) (Recommended)
 
