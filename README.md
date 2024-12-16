@@ -16,7 +16,7 @@ This project aims to provide a structured and user-friendly alternative to the t
 
 ## Explore the Documentation  
 
-Visit the full ArchWiki - OCD Edition at: [Arch-Wiki Documentation](https://Justus0405.github.io/Arch-Wiki/)
+Visit the full ArchWiki - OCD Edition at: [Arch-Wiki Documentation](https://harilvfs.github.io/Arch-Wiki/)
 
 
 [check]: https://github.com/Justus0405/Arch-Wiki/actions/workflows/deploy.yml/badge.svg
