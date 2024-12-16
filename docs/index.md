@@ -17,9 +17,6 @@ hero:
     - theme: alt
       text: Get Started 
       link: /installation/baseinstall.md
-    - theme: alt
-      text: Github
-      link: https://github.com/Justus0405/arch-wiki
 features:
   - icon: <img width="35" height="35" src="https://cdn-icons-png.flaticon.com/128/17377/17377991.png" alt="simple"/>
     title: Simple

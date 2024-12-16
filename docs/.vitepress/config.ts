@@ -115,8 +115,8 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/Justus0405" },
-      { icon: "discord", link: "https://discord.com/invite/E2Bp7GtcaA" },
+      { icon: "github", link: "https://github.com/harilvfs" },
+      { icon: "discord", link: "https://discord.com/invite/8NJWstnUHd" },
       { icon: "telegram", link: "https://t.me/harilvfs" },
     ],
     footer: {
