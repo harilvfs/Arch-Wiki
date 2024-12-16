@@ -72,7 +72,7 @@ export default defineConfig({
       {
         text: 'Desktop Environments',
         collapsible: true,
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'GNOME Installation', link: '/desktop/desktopenv.md' },
         ]
@@ -80,7 +80,7 @@ export default defineConfig({
       {
         text: 'Tiling Window Managers',
         collapsible: true,
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'Hyprland', link: '/wm/hyprland.md' },
           { text: 'i3wm', link: '/wm/i3.md' },
@@ -90,7 +90,7 @@ export default defineConfig({
       {
         text: 'Package Management',
         collapsible: true,
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'Pacman', link: '/pacman/pacman.md' },
           { text: 'Mirror List', link: '/pacman/mirrorlist.md' }
