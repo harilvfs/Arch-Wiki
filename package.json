@@ -1,8 +1,6 @@
 {
   "name": "arch-wiki",
   "type": "module",
-  "dependencies": {
-  },
   "devDependencies": {
     "vitepress": "^1.5.0"
   },
