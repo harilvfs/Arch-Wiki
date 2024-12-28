@@ -38,8 +38,16 @@ grub-mkconfig -o /boot/grub/grub.cfg
   exit
   ```
 
+- Unmount the partitions:  
+  ```bash
+  umount -R /mnt
+  ```
+
 - Reboot your system:  
   ```bash
   reboot
   ```
+
+> [!NOTE]
+> **Remember to remove the installation media (e.g., USB) after rebooting to avoid booting into the installer again.**
 

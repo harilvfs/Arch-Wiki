@@ -13,6 +13,8 @@ systemctl enable NetworkManager
 
 ### Configure `pacman.conf` for Optimized Package Management  
 
+**[OPTIONAL]**
+
 > [!NOTE]  
 > Editing the `pacman.conf` file allows you to customize your package manager for better performance and features.
 
@@ -51,10 +53,12 @@ pacman -Syy
 ### Set the System Timezone  
 
 > [!IMPORTANT]  
-> Choose the correct timezone to ensure accurate timekeeping. Replace `Europe/Berlin` with your actual timezone.
+> Choose the correct timezone to ensure accurate timekeeping. Replace `Asia/Kathmandu` with your actual timezone.
+>
+> **Press Tab to autocomplete the timezone.**
 
 ```bash
-ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Kathmandu /etc/localtime
 ```
 
 ---
@@ -85,10 +89,15 @@ hwclock --systohc
    ```
 
 - Set the default system language:
-    ```bash
-    echo "LANG=de_DE.UTF-8" > /etc/locale.conf
+    :::code-group
+    ```bash [US English]
+    echo "LANG=en_US.UTF-8" > /etc/locale.conf
     ```
-   - Replace `de_DE.UTF-8` with your preferred language.
+    ```bash [CUSTOM]
+    echo "LANG="Your Language.UTF-8" > /etc/locale.conf
+    ```
+    :::
+   - Replace `en_US.UTF-8` with your preferred language.
 
 ---
 
@@ -106,10 +115,16 @@ echo "arch" > /etc/hostname
 > [!TIP]  
 > Configure the console keyboard layout to match your physical keyboard.
 
-```bash
-echo "KEYMAP=de-latin1" > /etc/vconsole.conf
+:::code-group
+
+```bash [US Keyboard]
+echo "KEYMAP=us" > /etc/vconsole.conf
+```  
+```bash [CUSTOM Keyboard]
+echo "KEYMAP="Your Keyboard Layout"" > /etc/vconsole.conf
 ```
-- Replace `de-latin1` with your preferred keymap.
+:::
+- Replace `us` with your preferred keymap.
 
 ---
 
@@ -118,12 +133,12 @@ echo "KEYMAP=de-latin1" > /etc/vconsole.conf
 > Add a non-root user with necessary permissions for a safer and more secure system.
 
 ```bash
-useradd -m -G wheel,power,storage,video,audio -s /bin/bash justus
+useradd -m -G wheel,power,storage,video,audio -s /bin/bash yourusername
 ```
 
 - Set a password for the new user:
   ```bash
-  passwd justus
+  passwd yourusername
   ```
 
 ---

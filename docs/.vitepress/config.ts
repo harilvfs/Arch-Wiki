@@ -62,29 +62,13 @@ export default defineConfig({
         ]
       },
       { 
-        text: 'Sound',
+        text: 'After Installation',
         collapsible: true,
         collapsed: false,
         items: [
           { text: 'PipeWire Setup', link: '/sound/pipewire.md' },
-        ]
-      },
-      {
-        text: 'Desktop Environments',
-        collapsible: true,
-        collapsed: true,
-        items: [
-          { text: 'GNOME Installation', link: '/desktop/desktopenv.md' },
-        ]
-      },
-      {
-        text: 'Tiling Window Managers',
-        collapsible: true,
-        collapsed: true,
-        items: [
-          { text: 'Hyprland', link: '/wm/hyprland.md' },
-          { text: 'i3wm', link: '/wm/i3.md' },
-          { text: 'Dwm', link: '/wm/dwm.md' },
+          { text: 'Desktop Environment', link: '/desktop/desktopenv.md' },
+          { text: 'Tiling WM', link: '/wm/tilingwm.md' },
         ]
       },
       {

@@ -1,16 +1,23 @@
 # Arch Linux Installation Notes
 
+> [!NOTE]
+> These are the base notes displayed at the top of the documentation.
+>
+> Only refer to them if you missed something in the earlier guide. 
+>
+> Avoid following these legacy notes directly.
+
 ## Preparation in the ISO Environment
 
 1. **Set Keymap**  
-   `loadkeys de-latin1`
+   `loadkeys us`
 
 2. **List Existing Partitions**  
    `lsblk`
 
 3. **Partition Disk (Erase All)**  
    Use `gdisk` to prepare the disk:  
-   `gdisk /dev/nvme0n1`
+   `gdisk /dev/nvme0n1` or `gdisk /dev/sda`
    - Enter `x` to open expert mode  
    - Enter `z` to delete all partitions  
 
@@ -18,27 +25,27 @@
    `reboot`
 
 5. **Set Keymap Again**  
-   `loadkeys de-latin1`
+   `loadkeys us`
 
 6. **List Partitions Again**  
    `lsblk`
 
 7. **Create Partitions with cfdisk**  
-   `cfdisk /dev/nvme0n1`
+   `cfdisk /dev/nvme0n1` or `cfdisk /dev/sda`
    - Partition 1: `1G`, EFI  
    - Partition 2: `4G`, Linux swap  
    - Partition 3: Remaining space, Linux filesystem  
 
 8. **Format Partitions**  
-   - `mkfs.fat -F 32 /dev/nvme0n1p1`  
-   - `mkswap /dev/nvme0n1p2`  
-   - `swapon /dev/nvme0n1p2`  
-   - `mkfs.ext4 /dev/nvme0n1p3`
+   - `mkfs.fat -F 32 /dev/nvme0n1p1` or `mkfs.fat -F 32 /dev/sda1` 
+   - `mkswap /dev/nvme0n1p2`  or `mkswap /dev/sda2`
+   - `swapon /dev/nvme0n1p2`  or `swapon /dev/sda2`
+   - `mkfs.ext4 /dev/nvme0n1p3` or `mkfs.ext4 /dev/sda3`
 
 9. **Mount Partitions**  
-   - `mount /dev/nvme0n1p3 /mnt`  
-   - `mount --mkdir /dev/nvme0n1p1 /mnt/boot`  
-   - `mount --mkdir /dev/sda1 /mnt/media`
+   - `mount /dev/nvme0n1p3 /mnt`  or `mount /dev/sda3 /mnt`
+   - `mount --mkdir /dev/nvme0n1p1 /mnt/boot`  or `mount --mkdir /dev/sda1 /mnt/boot`
+   - `mount --mkdir /dev/sda1 /mnt/media` or `mount --mkdir /dev/sda1 /mnt/media`
 
 10. **Install Base System**  
     `pacstrap -k /mnt base base-devel linux linux-firmware sof-firmware linux-headers nano networkmanager grub efibootmgr intel-ucode bash-completion`
@@ -56,36 +63,35 @@
 1. **Enable NetworkManager**  
    `sudo systemctl enable NetworkManager`
 
-2. **Configure pacman**  
+2. **Configure pacman**  [OPTIONAL]
    - `nano /etc/pacman.conf`  
      - Enable `ILoveCandy`, `ParallelDownloads`, and `Multilib`
-
-3. **Update Package Database**  
-   `pacman -Syy`
+   - **Update Package Database**  
+      `pacman -Syy`
 
 4. **Set Timezone**  
-   `ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime`
+   `ln -sf /usr/share/zoneinfo/Asia/Kathmandu /etc/localtime` [Change `Asia/Kathmandu` to your timezone]
 
 5. **Synchronize Hardware Clock**  
    `hwclock --systohc`
 
 6. **Configure Locale**  
    - Edit locale file: `nano /etc/locale.gen`  
-     - Uncomment `de_DE.UTF-8`  
+     - Uncomment `en_US.UTF-8`  [Change `en_US.UTF-8` to your locale]
    - Generate locale: `locale-gen`  
-   - Set locale: `echo "LANG=de_DE.UTF-8" > /etc/locale.conf`
+   - Set locale: `echo "LANG=en_US.UTF-8" > /etc/locale.conf` [Change `en_US.UTF-8` to your locale]
 
 7. **Set Hostname**  
    `echo "arch" > /etc/hostname`
 
 8. **Set Keymap**  
-   `echo "KEYMAP=de-latin1" > /etc/vconsole.conf`
+   `echo "KEYMAP=us" > /etc/vconsole.conf` [Change `us` to your keymap]
 
 9. **Create User**  
-   `useradd -m -g wheel,power,storage,video,audio -s /bin/bash justus`
+   `useradd -m -g wheel,power,storage,video,audio -s /bin/bash yourusername`
 
 10. **Set User Password**  
-    `passwd justus`
+    `passwd yourusername`
 
 11. **Edit sudoers File**  
     `EDITOR=nano visudo`  
@@ -108,8 +114,7 @@
      - Add `nvidia_drm.modeset=1` to `GRUB_CMDLINE_LINUX_DEFAULT`  
    - Rebuild initramfs: `mkinitcpio -P`
 
-4. **Reboot System**  
-   `reboot`
+4. **Reboot System**
 
 ### GRUB Bootloader
 1. **Install GRUB**  
@@ -118,8 +123,11 @@
 2. **Generate GRUB Configuration**  
    `grub-mkconfig -o /boot/grub/grub.cfg`
 
-3. **Exit and Reboot**  
+3. **Exit Umount and Reboot**  
    `exit`  
+   
+   `umount -R /mnt`
+
    `reboot`
 
 ---
