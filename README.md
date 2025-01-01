@@ -8,7 +8,7 @@ ArchWiki - OCD Edition
 
 Welcome to **ArchWiki - OCD Edition**: your meticulously organized and alternative source for Arch Linux documentation. Designed for enthusiasts and beginners alike, this wiki offers a seamless guide to installaing Arch Linux.  
 
-<a href="https://archlinux.org/" target="_blank"><img alt="Arch" src="https://img.shields.io/badge/ARCH-1793D1?style=flat-square" width="55"></a> <a href="https://Justus0405.github.io/Arch-Wiki/" target="_blank"><img alt="Wiki" src="https://img.shields.io/badge/WIKI-98c379?style=flat-square" width="50"></a>
+<a href="https://archlinux.org/" target="_blank"><img alt="Arch" src="https://img.shields.io/badge/ARCH-1793D1?style=flat-square" width="55"></a> <a href="https://harilvfs.github.io/Arch-Wiki/" target="_blank"><img alt="Wiki" src="https://img.shields.io/badge/WIKI-98c379?style=flat-square" width="50"></a>
 
 ## About  
 
