@@ -1,8 +1,13 @@
+<img
+  src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/archlinux/arch_linux.svg"
+  alt="arch"
+  width="25%"
+  align="right"
+ />
+
 # Arch Linux: A Minimalist's Delight  
 
 Arch Linux is a **versatile, lightweight, and cutting-edge** Linux distribution designed for users who value simplicity and control. Following the **KISS (Keep It Simple, Stupid)** principle, it provides the tools to build your system from the ground up, tailored to your exact needs.  
-
----
 
 ## Key Features  
 
@@ -27,7 +32,6 @@ Arch Linux is a **versatile, lightweight, and cutting-edge** Linux distribution 
 ### Active Community  
 *A vibrant and knowledgeable community supports Arch Linux through forums, IRC channels, and mailing lists, ensuring help is always available.*
 
----
 
 ## Why Choose Arch Linux?  
 
@@ -36,7 +40,6 @@ Arch Linux is a **versatile, lightweight, and cutting-edge** Linux distribution 
 - **Cutting-Edge Software**: Enjoy access to the latest packages and technologies.  
 - **Stability and Performance**: Achieve a balance of modern features and reliable stability.  
 
----
 
 ## System Requirements  
 
@@ -45,7 +48,6 @@ Arch Linux is a **versatile, lightweight, and cutting-edge** Linux distribution 
 - **Storage**: 2 GB of free disk space (more for additional software).  
 - **Internet**: Active internet connection for package downloads.  
 
----
 
 ## Where to Start  
 
@@ -53,7 +55,6 @@ Arch Linux is a **versatile, lightweight, and cutting-edge** Linux distribution 
 - **Download the ISO:** [Get Arch Linux](https://archlinux.org/download/) and boot into the live environment.  
 - **Follow the Installation Guide:** Partition your disk, configure your network, and install Arch Linux step-by-step.  
 
----
 
 ## The Arch Philosophy  
 
