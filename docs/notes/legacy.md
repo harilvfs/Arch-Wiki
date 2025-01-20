@@ -32,23 +32,45 @@
 
 7. **Create Partitions with cfdisk**  
    `cfdisk /dev/nvme0n1` or `cfdisk /dev/sda`
+
+::: code-group
+
+```text [UEFI]
    - Partition 1: `1G`, EFI  
    - Partition 2: `4G`, Linux swap  
    - Partition 3: Remaining space, Linux filesystem  
+```
+
+```text [MBR BIOS (legacy boot)]
+   - Bios Boot Partition: BIOS (1MiB)
+   - Swap Partition: 4GiB
+   - System Partition: Remaining space
+```
+
+:::
 
 8. **Format Partitions**  
-   - `mkfs.fat -F 32 /dev/nvme0n1p1` or `mkfs.fat -F 32 /dev/sda1` 
-   - `mkswap /dev/nvme0n1p2`  or `mkswap /dev/sda2`
-   - `swapon /dev/nvme0n1p2`  or `swapon /dev/sda2`
-   - `mkfs.ext4 /dev/nvme0n1p3` or `mkfs.ext4 /dev/sda3`
+   - `mkfs.fat -F 32 /dev/nvme0n1p*` or `mkfs.fat -F 32 /dev/sda*` [ Only For UEFI System] 
+   - `mkswap /dev/nvme0n1p*`  or `mkswap /dev/sda*`
+   - `swapon /dev/nvme0n1p*`  or `swapon /dev/sda*`
+   - `mkfs.ext4 /dev/nvme0n1p*` or `mkfs.ext4 /dev/sda*`
 
 9. **Mount Partitions**  
-   - `mount /dev/nvme0n1p3 /mnt`  or `mount /dev/sda3 /mnt`
-   - `mount --mkdir /dev/nvme0n1p1 /mnt/boot`  or `mount --mkdir /dev/sda1 /mnt/boot`
-   - `mount --mkdir /dev/sda1 /mnt/media` or `mount --mkdir /dev/sda1 /mnt/media`
+   - `mount /dev/nvme0n1p* /mnt`  or `mount /dev/sda* /mnt`
+   - `mount --mkdir /dev/nvme0n1p* /mnt/boot`  or `mount --mkdir /dev/sda* /mnt/boot` [ Only For UEFI System]
+   - `mount --mkdir /dev/sda* /mnt/media` or `mount --mkdir /dev/sda* /mnt/media` [ IDK ]
 
 10. **Install Base System**  
-    `pacstrap -k /mnt base base-devel linux linux-firmware sof-firmware linux-headers nano networkmanager grub efibootmgr intel-ucode bash-completion`
+
+::: code-group
+
+```bash [UEFI]
+pacstrap -k /mnt base base-devel linux linux-firmware sof-firmware linux-headers nano networkmanager grub efibootmgr intel-ucode bash-completion
+```
+
+```bash [MBR BIOS (legacy boot)]
+pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git intel-ucode bash-completion
+```
 
 11. **Generate fstab**  
     `genfstab -U /mnt >> /mnt/etc/fstab`
@@ -118,8 +140,17 @@
 
 ### GRUB Bootloader
 1. **Install GRUB**  
-   `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --removable`
+::: code-group
 
+```bash [UEFI]
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub --removable
+```
+
+```bash [MBR BIOS (legacy boot)]
+grub-install --target=i386-pc /dev/sdX
+```
+
+:::
 2. **Generate GRUB Configuration**  
    `grub-mkconfig -o /boot/grub/grub.cfg`
 

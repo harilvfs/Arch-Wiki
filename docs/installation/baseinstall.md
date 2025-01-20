@@ -38,7 +38,7 @@ gdisk /dev/nvme0n1
 ```
 
 ```bash [SATA Drive]
-gdisk /dev/sda1
+gdisk /dev/sda
 ```
 :::
 
@@ -66,35 +66,59 @@ cfdisk /dev/sda
 ```
 :::
 
+::: code-group
+
+```text [UEFI]
 Create the following partitions:
-- **Boot Partition**: EFI (1GiB)
-- **Swap Partition**: 4GiB
-- **System Partition**: Remaining space  
+- Boot Partition: EFI (1GiB)
+- Swap Partition: 4GiB
+- System Partition: Remaining space  
+```
+
+```text [MBR BIOS (legacy boot)]
+Create the following partitions:
+- Bios Boot Partition: BIOS (1MiB)
+- Swap Partition: 4GiB
+- System Partition: Remaining space  
+```
+:::
 
 Your partitions should look like this:
 
-```bash
+::: code-group
+
+```bash [UEFI]
 p1 = 1GiB, EFI
 p2 = 4GiB, Linux Swap
 p3 = ENTER, Linux Filesystem
 ```
 
+```bash [MBR BIOS (legacy boot)]
+p1 = 1MiB, Bios Boot
+p2 = 4GiB, Linux Swap
+p3 = ENTER, Linux Filesystem
+```
+:::
+
 ---
 
 ### **5. Create Filesystems on These Partitions**
 
-> [!INFO]  
-> Formatting partitions is essential to prepare them for the operating system.
+> [!NOTE]
+> **If you are using an BIOS (legacy boot MBR), the EFI partition creation step is unnecessary and can be skipped.**
+>
+> ***I am using an asterisk ( * ) in the drive name **`(e.g., /dev/sda*)`** to indicate that you need to select your preferred partition, such as **`/dev/sda1`** or **`/dev/sda2`**. The same applies to NVMe drives, for example, **`/dev/nvme0n1p1`** or **`/dev/nvme0n1p2`**.***
 
-- **Format the Boot Partition as FAT32:**
+
+- **Format the Boot Partition as FAT32:** [ Only For UEFI System ]
 
 ::: code-group
 ```bash [NVMe Drive]
-mkfs.fat -F 32 /dev/nvme0n1p1
+mkfs.fat -F 32 /dev/nvme0n1p*
 ```
 
 ```bash [SATA Drive]
-mkfs.fat -F 32 /dev/sda1
+mkfs.fat -F 32 /dev/sda*
 ```
 :::
 
@@ -102,13 +126,13 @@ mkfs.fat -F 32 /dev/sda1
 ::: code-group
 
 ```bash [NVMe Drive]
-mkswap /dev/nvme0n1p2
-swapon /dev/nvme0n1p2
+mkswap /dev/nvme0n1p*
+swapon /dev/nvme0n1p*
 ```
 
 ```bash [SATA Drive]
-mkswap /dev/sda2
-swapon /dev/sda2
+mkswap /dev/sda*
+swapon /dev/sda*
 ```
 :::
 
@@ -120,11 +144,11 @@ swapon /dev/sda2
 ::: code-group
 
 ```bash [NVMe Drive]
-mkfs.ext4 /dev/nvme0n1p3
+mkfs.ext4 /dev/nvme0n1p*
 ```
 
 ```bash [SATA Drive]
-mkfs.ext4 /dev/sda3
+mkfs.ext4 /dev/sda*
 ```
 :::
 
@@ -135,23 +159,23 @@ mkfs.ext4 /dev/sda3
 
 ::: code-group
 ```bash [NVMe Drive]
-mount /dev/nvme0n1p3 /mnt
+mount /dev/nvme0n1p* /mnt
 ```
 
 ```bash [SATA Drive]
-mount /dev/sda3 /mnt
+mount /dev/sda* /mnt
 ```
 :::
 
-- **Mount the Boot Partition:**
+- **Mount the Boot Partition:** [ Only For UEFI System]
 
 ::: code-group
 ```bash [NVMe Drive]
-mount --mkdir /dev/nvme0n1p1 /mnt/boot
+mount --mkdir /dev/nvme0n1p* /mnt/boot
 ```
 
 ```bash [SATA Drive]
-mount --mkdir /dev/sda1 /mnt/boot
+mount --mkdir /dev/sda* /mnt/boot
 ```
 :::
 
@@ -164,9 +188,17 @@ mount --mkdir /dev/sda1 /mnt/boot
 > [!INFO]  
 > This command installs the essential packages for a minimal Arch Linux system, including the kernel, firmware, and essential utilities.
 
-```bash
-pacstrap -K /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub efibootmgr intel-ucode bash-completion
+::: code-group
+
+```bash [UEFI]
+pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git efibootmgr intel-ucode bash-completion
 ```
+
+```bash [MBR BIOS (legacy boot)]
+pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git intel-ucode bash-completion
+```
+
+:::
 
 ---
 
@@ -199,7 +231,7 @@ cat /mnt/etc/fstab
 
 - **When to Re-run?** <img src="https://cdn-icons-png.flaticon.com/128/14865/14865151.png" width="40" />
 
-***`Re-run if partitioning or mount points change.`***
+**`Re-run if partitioning or mount points change.`**
 
 ---
 

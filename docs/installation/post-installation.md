@@ -11,9 +11,10 @@ systemctl enable NetworkManager
 ```
 
 
-### Configure `pacman.conf` for Optimized Package Management  
+### Configure `pacman.conf` for Optimized Package Management 
 
-**[OPTIONAL]**
+### [ OPTIONAL ]
+
 
 > [!NOTE]  
 > Editing the `pacman.conf` file allows you to customize your package manager for better performance and features.
