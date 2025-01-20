@@ -10,11 +10,11 @@ Welcome to **ArchWiki - OCD Edition**: your meticulously organized and alternati
 
 <a href="https://archlinux.org/" target="_blank"><img alt="Arch" src="https://img.shields.io/badge/ARCH-1793D1?style=flat-square" width="55"></a> <a href="https://harilvfs.github.io/Arch-Wiki/" target="_blank"><img alt="Wiki" src="https://img.shields.io/badge/WIKI-98c379?style=flat-square" width="50"></a>
 
-## About  
+### About  
 
 This project aims to provide a structured and user-friendly alternative to the traditional Arch Wiki. The **OCD Edition** ensures clarity and completeness while maintaining Arch Linux's philosophy of simplicity and customization.
 
-## Explore the Documentation  
+### Explore the Documentation  
 
 Visit the full ArchWiki - OCD Edition at: [Arch-Wiki Documentation](https://harilvfs.github.io/Arch-Wiki/)
 
