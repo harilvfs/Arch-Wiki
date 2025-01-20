@@ -1,7 +1,10 @@
 name: Arch Wiki Contribution/Issue Report
 description: Report errors, suggest improvements, or add missing information for the Arch Wiki project.
 title: "[Wiki Update] - Provide a brief and clear summary of your issue/suggestion"
-labels: ["documentation", "wiki", "enhancement"]
+labels:
+  - documentation
+  - wiki
+  - enhancement
 body:
   - type: markdown
     attributes:
@@ -17,36 +20,36 @@ body:
   - type: textarea
     id: issue_summary
     attributes:
-      label: Brief Summary of the Issue/Suggestion
-      description: Provide a concise summary of the problem, error, or suggestion.
-      placeholder: Example: "The explanation of GRUB installation for MBR systems is unclear."
+      label: "Brief Summary of the Issue/Suggestion"
+      description: "Provide a concise summary of the problem, error, or suggestion."
+      placeholder: "Example: The explanation of GRUB installation for MBR systems is unclear."
 
   - type: textarea
     id: detailed_description
     attributes:
-      label: Detailed Description
-      description: Explain the issue/suggestion in detail. Include what is missing, incorrect, or needs to be improved.
-      placeholder: Example: "The GRUB command section lacks details about the significance of '--target=i386-pc'. Adding this can help users understand its purpose."
+      label: "Detailed Description"
+      description: "Explain the issue/suggestion in detail. Include what is missing, incorrect, or needs to be improved."
+      placeholder: "Example: The GRUB command section lacks details about the significance of '--target=i386-pc'. Adding this can help users understand its purpose."
 
   - type: input
     id: affected_section
     attributes:
-      label: Affected Wiki Section
-      description: Mention the specific section or page affected by the issue.
-      placeholder: Example: "Bootloader Installation → Legacy BIOS Systems"
+      label: "Affected Wiki Section"
+      description: "Mention the specific section or page affected by the issue."
+      placeholder: "Example: Bootloader Installation → Legacy BIOS Systems"
 
   - type: textarea
     id: proposed_solution
     attributes:
-      label: Proposed Solution (Optional)
-      description: Suggest fixes, new content, or improvements to resolve the issue.
-      placeholder: Example: "Add a note explaining '--target=i386-pc' and clarify its use for MBR systems."
+      label: "Proposed Solution (Optional)"
+      description: "Suggest fixes, new content, or improvements to resolve the issue."
+      placeholder: "Example: Add a note explaining '--target=i386-pc' and clarify its use for MBR systems."
 
   - type: dropdown
     id: issue_priority
     attributes:
-      label: Priority Level
-      description: How urgent is this issue to resolve?
+      label: "Priority Level"
+      description: "How urgent is this issue to resolve?"
       options:
         - High (Critical issue or significant error)
         - Medium (Improvements or clarifications needed)
@@ -55,8 +58,8 @@ body:
   - type: checkboxes
     id: additional_information
     attributes:
-      label: Additional Context or Attachments
-      description: Check the relevant options below.
+      label: "Additional Context or Attachments"
+      description: "Check the relevant options below."
       options:
         - label: "I have attached screenshots or logs (if applicable)."
         - label: "I have reviewed the existing wiki content for duplicate issues."
@@ -65,7 +68,7 @@ body:
   - type: textarea
     id: additional_context
     attributes:
-      label: Additional Context (Optional)
-      description: Add any extra details or context that could help with the resolution.
-      placeholder: Example: "I encountered this issue while following the Arch installation guide on a legacy BIOS system."
+      label: "Additional Context (Optional)"
+      description: "Add any extra details or context that could help with the resolution."
+      placeholder: "Example: I encountered this issue while following the Arch installation guide on a legacy BIOS system."
 
