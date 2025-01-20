@@ -65,3 +65,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 > [!NOTE]
 > **Remember to remove the installation media (e.g., USB) after rebooting to avoid booting into the installer again.**
 
+
+> [!IMPORTANT]
+> I haven’t mentioned or written anything about installing graphics drivers for NVIDIA or AMD GPUs. You can find information for NVIDIA in these docs, but I strongly recommend checking the official [Arch Wiki](https://wiki.archlinux.org/title/Category:Graphics) for installing GPU drivers for both NVIDIA and AMD.
+> 
+> While I could include the documentation here for installing graphics drivers, it may not be the most effective way to properly set up your GPU drivers. Thank you.
+

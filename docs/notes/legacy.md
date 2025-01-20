@@ -72,6 +72,8 @@ pacstrap -k /mnt base base-devel linux linux-firmware sof-firmware linux-headers
 pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git intel-ucode bash-completion
 ```
 
+:::
+
 11. **Generate fstab**  
     `genfstab -U /mnt >> /mnt/etc/fstab`
 
