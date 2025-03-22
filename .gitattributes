@@ -1,0 +1,2 @@
+docs/.vitepress/** linguist-documentation=false
+docs/.vitepress/**/*.ts linguist-language=TypeScript
