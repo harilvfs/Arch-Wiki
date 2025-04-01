@@ -46,7 +46,7 @@ If the automatic update fails, refresh the keyring manually:
 If updating the keyring doesn’t work and you urgently need to proceed, temporarily disable signature checking:
 
 - Open `/etc/pacman.conf` and set:
-   ```int
+   ```text
    [options]
    SigLevel = Never
    ```
