@@ -12,11 +12,14 @@ hero:
   tagline: "Your Simple Guide to Installing and Mastering Arch Linux 🐧"
   actions:
     - theme: brand
-      text: What is Arch Linux?
+      text: Huhh Arch Linux?
       link: /getting-started/introduction.md
     - theme: alt
       text: Get Started 
       link: /installation/baseinstall.md
+    - theme: alt
+      text: Source ↗
+      link: https://github.com/harilvfs/Arch-Wiki
 features:
   - icon: <img width="35" height="35" src="https://cdn-icons-png.flaticon.com/128/17377/17377991.png" alt="simple"/>
     title: Simple
