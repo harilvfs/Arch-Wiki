@@ -113,7 +113,7 @@
   include = /etc/pacman.d/mirrorlist
   ```
   *`ILoveCandy` adds a visual effect to downloads, and `ParallelDownloads` speeds up package retrieval by allowing multiple downloads simultaneously.*
-  *`multilib` adds 32-Bit support which is curcial for some packages like `steam`.*
+  *`multilib` adds 32-Bit support which is crucial for some packages like `steam`.*
 
 - **Update Pacman Repositories**:
   *This command refreshes the package database, ensuring you have the latest information about available packages.*
