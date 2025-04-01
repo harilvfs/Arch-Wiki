@@ -188,6 +188,10 @@ mount --mkdir /dev/sda* /mnt/boot
 > [!INFO]  
 > This command installs the essential packages for a minimal Arch Linux system, including the kernel, firmware, and essential utilities.
 
+> [!IMPORTANT]
+> You will need to install `intel-ucode` for intel CPUs
+> and `amd-ucode` for AMD CPUs for their microcode. These are important for stability, security and performance!
+
 ::: code-group
 
 ```bash [UEFI]
