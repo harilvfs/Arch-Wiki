@@ -195,11 +195,11 @@ mount --mkdir /dev/sda* /mnt/boot
 ::: code-group
 
 ```bash [UEFI]
-pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git efibootmgr intel-ucode bash-completion
+pacstrap -K /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git efibootmgr intel-ucode bash-completion
 ```
 
 ```bash [MBR BIOS (legacy boot)]
-pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git intel-ucode bash-completion
+pacstrap -K /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git intel-ucode bash-completion
 ```
 
 :::
