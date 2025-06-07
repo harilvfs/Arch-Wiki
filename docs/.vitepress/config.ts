@@ -107,7 +107,7 @@ export default defineConfig({
 
     footer: {
       message: "Released under the MIT License. Built by <a href='https://github.com/harilvfs' target='_blank'>harilvfs</a> (aka Hari Chalise).",
-      copyright: "Copyright © 2024 justus0405",
+      copyright: "Copyright © 2025 justus0405",
     },
 
     search: {
