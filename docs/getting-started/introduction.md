@@ -54,9 +54,3 @@ Arch Linux is a **versatile, lightweight, and cutting-edge** Linux distribution 
 - **Read the [Arch Wiki](https://wiki.archlinux.org):** The definitive guide for all things Arch Linux.  
 - **Download the ISO:** [Get Arch Linux](https://archlinux.org/download/) and boot into the live environment.  
 - **Follow the Installation Guide:** Partition your disk, configure your network, and install Arch Linux step-by-step.  
-
-
-## The Arch Philosophy  
-
-**Arch Linux is more than a distribution—it’s a philosophy. It encourages users to take control of their system and learn its inner workings. With Arch Linux, you don’t just use a computer—you master it.**
-
