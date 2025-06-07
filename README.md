@@ -16,7 +16,7 @@ This project aims to provide a structured and user-friendly alternative to the t
 
 ### Explore the Documentation  
 
-Visit the full ArchWiki - OCD Edition at: [arch.chalisehari.com.np](https://arch.chalisehari.com.np)
+Visit the full Wiki - OCD Edition at: [arch.chalisehari.com.np](https://arch.chalisehari.com.np)
 
 <!--
 
