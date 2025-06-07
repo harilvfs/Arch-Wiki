@@ -65,11 +65,11 @@
 ::: code-group
 
 ```bash [UEFI]
-pacstrap -k /mnt base base-devel linux linux-firmware sof-firmware linux-headers nano networkmanager grub efibootmgr intel-ucode bash-completion
+pacstrap -K /mnt base base-devel linux linux-firmware sof-firmware linux-headers nano networkmanager grub efibootmgr intel-ucode bash-completion
 ```
 
 ```bash [MBR BIOS (legacy boot)]
-pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git intel-ucode bash-completion
+pacstrap -K /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-firmware nano networkmanager grub wget git intel-ucode bash-completion
 ```
 
 :::
@@ -79,8 +79,6 @@ pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-
 
 12. **Chroot into New System**  
     `arch-chroot /mnt`
-
----
 
 ## Configuration in the New System
 
@@ -120,8 +118,6 @@ pacstrap -k /mnt base base-devel linux-zen linux-zen-headers linux-firmware sof-
 11. **Edit sudoers File**  
     `EDITOR=nano visudo`  
     - Uncomment `%wheel ALL=(ALL) ALL`
-
----
 
 ## Additional Installations
 
@@ -163,8 +159,6 @@ grub-install --target=i386-pc /dev/sdX
 
    `reboot`
 
----
-
 ## PipeWire (Audio Server)
 
 1. **Install PipeWire**  
@@ -175,8 +169,6 @@ grub-install --target=i386-pc /dev/sdX
 
 3. **Enable PipeWire Services**  
    `systemctl --user enable pipewire pipewire-pulse wireplumber`
-
----
 
 ## Installing Desktop Environments (DE)
 
@@ -192,33 +184,3 @@ grub-install --target=i386-pc /dev/sdX
 
 4. **Reboot System**  
    `reboot`
-
-### i3wm
-1. **Clone Dotfiles Repo**  
-   `git clone https://github.com/justus0405/i3wm-dotfiles.git`
-
-2. **Navigate to Script Directory**  
-   `cd i3wm-dotfiles/src/`
-
-3. **Make Script Executable**  
-   `chmod +x install.sh`
-
-4. **Run Install Script**  
-   `./install.sh`
-
-### DWM
-1. **Clone DWM Repo**  
-   `git clone https://github.com/harilvfs/dwm`
-
-2. **Install DWM**  
-   `cd dwm`  
-   `sudo make clean install`
-
-### Hyprland
-1. **Recommended Setup**  
-   Use one of these repositories for a seamless setup:  
-   - [Prasanth Rangan's Hyprdots](https://github.com/prasanthrangan/hyprdots)  
-   - [ml4w's Hyprland Dotfiles](https://github.com/mylinuxforwork/dotfiles)  
-
-   These repositories provide a ready-to-use Hyprland environment.
-

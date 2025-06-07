@@ -95,6 +95,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Battery Optimization', link: '/laptop/batteryopt.md' },
+          { text: 'Touchpad', link: '/laptop/touchpad.md' },
         ]
       },
     ],
