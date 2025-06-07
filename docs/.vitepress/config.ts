@@ -4,11 +4,12 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Arch Wiki",
   description: "A concise guide for Arch Linux installation",
-//  base: "/Arch-Wiki/",
+  base: "/",
   lastUpdated: true,
+  cleanUrls: true,
 
   head: [
-    ["link", { rel: "icon", href: "/Arch-Wiki/archx.webp" }],
+    ["link", { rel: "icon", href: "/archx.webp" }],
   ],
 
   themeConfig: {
