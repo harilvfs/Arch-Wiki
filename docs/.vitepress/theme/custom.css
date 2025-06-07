@@ -127,7 +127,7 @@
 }
 
 .VPButton.brand:hover {
-  background-color: #d67a97 !important;
+  background-color: color-mix(in srgb, var(--vp-c-brand-2), #000 10%) !important;
   color: #1e1e2e !important;
 }
 
