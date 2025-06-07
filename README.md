@@ -6,10 +6,6 @@ ArchWiki - OCD Edition
 
 </h1>
 
-> [!IMPORTANT]
-> This is a fork of the main repo from [Justus0405](https://github.com/Justus0405). Yeah, a lot of stuff from our wiki is the same when it comes to Arch installation, but other things are mostly a bit different between his and mine. I highly recommend checking out his site [Justus0405/Arch-Wiki](https://justus0405.github.io/Arch-Wiki/) for installing graphics drivers, audio, and a lot more…
-> Like, I haven’t really provided a proper detailed guide for post-install stuff — sure, you’ll find a nice simple guide for installing Arch here, but after that, I suggest heading over to his site since he’s got a better setup guide for the system.
-
 Welcome to **ArchWiki - OCD Edition**: your meticulously organized and alternative source for Arch Linux documentation. Designed for enthusiasts and beginners alike, this wiki offers a seamless guide to installaing Arch Linux.  
 
 <a href="https://archlinux.org/" target="_blank"><img alt="Arch" src="https://img.shields.io/badge/ARCH-1793D1?style=flat-square" width="55"></a> <a href="https://arch.chalisehari.com.np" target="_blank"><img alt="Wiki" src="https://img.shields.io/badge/WIKI-98c379?style=flat-square" width="50"></a>
@@ -20,7 +16,7 @@ This project aims to provide a structured and user-friendly alternative to the t
 
 ### Explore the Documentation  
 
-Visit the full ArchWiki - OCD Edition at: [Arch-Wiki Documentation](https://arch.chalisehari.com.np)
+Visit the full ArchWiki - OCD Edition at: [arch.chalisehari.com.np](https://arch.chalisehari.com.np)
 
 <!--
 
