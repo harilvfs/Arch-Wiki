@@ -1,6 +1,6 @@
-# Arch Linux Installation Notes
+# Legacy Notes
 
-> [!NOTE]
+> [!CAUTION]
 > These are the base notes displayed at the top of the documentation.
 >
 > Only refer to them if you missed something in the earlier guide. 

@@ -1,11 +1,12 @@
 # **Inside the ISO**
 
-### **1. Load Keyboard Layout** (Default: `usa`)
+### **1. Load Keyboard Layout** ( Default : `USA`)
 
 > [!TIP]  
 >If your keyboard layout is different from the default (USA), use the loadkeys command to switch to your preferred layout.
 >
 > For example, use loadkeys `us` for a US English keyboard.
+
 :::code-group
 ```sh [US Keyboard]
 loadkeys us
