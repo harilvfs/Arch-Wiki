@@ -2,13 +2,13 @@
   
 ArchWiki - OCD Edition  
 
-<img src="https://archlinux.org/static/logos/archlinux-logo-light-scalable.1ae4cc2e2469.svg" width="200" alt="Arch Linux Logo" />
+<a href="https://archlinux.org/" target="_blank" rel="noopener noreferrer">
+  <img src="https://archlinux.org/static/logos/archlinux-logo-light-scalable.1ae4cc2e2469.svg" width="200" alt="Arch Linux Logo" />
+</a>
 
 </h1>
 
 Welcome to **ArchWiki - OCD Edition**: your meticulously organized and alternative source for Arch Linux documentation. Designed for enthusiasts and beginners alike, this wiki offers a seamless guide to installaing Arch Linux.  
-
-<a href="https://archlinux.org/" target="_blank"><img alt="Arch" src="https://img.shields.io/badge/ARCH-1793D1?style=flat-square" width="55"></a> <a href="https://arch.chalisehari.com.np" target="_blank"><img alt="Wiki" src="https://img.shields.io/badge/WIKI-98c379?style=flat-square" width="50"></a>
 
 ### About  
 
