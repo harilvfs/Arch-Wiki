@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Arch Wiki",
   description: "A concise guide for Arch Linux installation",
-  base: "/Arch-Wiki/",
+//  base: "/Arch-Wiki/",
   lastUpdated: true,
 
   head: [
@@ -103,6 +103,7 @@ export default defineConfig({
       { icon: "discord", link: "https://discord.com/invite/8NJWstnUHd" },
       { icon: "telegram", link: "https://t.me/harilvfs" },
     ],
+
     footer: {
       message: "Released under the MIT License. Built by <a href='https://github.com/harilvfs' target='_blank'>harilvfs</a> (aka Hari Chalise).",
       copyright: "Copyright © 2024 justus0405",
@@ -111,6 +112,7 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+
     returnToTopLabel: 'Return to Top',
     sidebarMenuLabel: 'Sidebar Menu',
   },
