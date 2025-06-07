@@ -9,7 +9,7 @@ hero:
     src: /archx.webp
     alt: Arch Linux logo
     style: "width: 200px; height: auto;"
-  tagline: "Your Simple Guide to Installing and Mastering Arch Linux 🐧"
+  tagline: "Your Simple Guide to Installing Arch Linux 🐧"
   actions:
     - theme: brand
       text: Huhh Arch Linux?
